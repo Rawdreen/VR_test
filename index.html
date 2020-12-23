@@ -17,10 +17,13 @@
             <audio id="street" src="Street.mp3"></audio>
         </a-assets>
 
-        <a-camera>
-            <a-cursor color="#ffffff"></a-cursor>
-        </a-camera>
         <a-entity movement-controls="controls: checkpoint" checkpoint-controls="mode: animate">
+            <a-camera>
+                <a-cursor color="#ffffff" cursor="fuse: true; fuseTimeout: 1500">
+                    <a-animation attribute="scale" to="3 3 3" dur="1500" begin="cursor-fusing">
+                    </a-animation>
+                </a-cursor>
+            </a-camera>
             <a-entity progressive-controls></a-entity>
         </a-entity>
         <a-entity gltf-model="#cityModel"></a-entity>
